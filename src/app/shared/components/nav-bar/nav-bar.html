@@ -1,0 +1,57 @@
+<div class="nav-container">
+    <div class="nav-logo">
+        <img src="assets/svg/angular-logo.svg" alt="Angular Logo" class="nav-logo-image">
+        <span class="nav-logo-text">{{ 'nav-bar.logo-text' | translate }}</span>
+    </div>
+
+    <button class="hamburger-menu" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <div class="nav-links" [class.active]="isMenuOpen">
+        <a routerLink="/" class="nav-link">{{ 'nav-bar.home' | translate }}</a>
+
+        @if (authService.isLoggedIn()) {
+        <a routerLink="/dashboard" class="nav-link dashboard-trigger">{{ 'nav-bar.dashboard' | translate }}</a>
+        <a (click)="logout()" class="nav-link logout-trigger">{{ 'nav-bar.logout' | translate }}</a>
+        <p class="nav-username">{{ authService.currentUser() }}</p>
+        } @else {
+        <a (click)="toggleLoginBox()" class="nav-link login-trigger">{{ 'nav-bar.login' | translate }}</a>
+        <a routerLink="/signup" class="nav-link">{{ 'nav-bar.signup' | translate }}</a>
+        }
+
+        <div class="lang-switch">
+            <button [class.active]="translationService.currentLang() === 'en'"
+                (click)="switchLanguage('en')">EN</button>
+            <button [class.active]="translationService.currentLang() === 'id'"
+                (click)="switchLanguage('id')">ID</button>
+        </div>
+    </div>
+
+    <div class="login-popup" [class.active]="isLoginBoxOpen">
+        <div class="popup-header">
+            <h4>{{ 'nav-bar.sign-in' | translate }}</h4>
+            <button class="close-btn" (click)="hideLoginBox()">&times;</button>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginHome()">
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'nav-bar.username' | translate }}</mat-label>
+                <input matInput formControlName="username" autocomplete="username"
+                    [placeholder]="'nav-bar.username-placeholder' | translate" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'nav-bar.password' | translate }}</mat-label>
+                <input matInput type="password" formControlName="password" autocomplete="current-password"
+                    [placeholder]="'nav-bar.password-placeholder' | translate" />
+            </mat-form-field>
+
+            <button class="popup-login-btn" type="submit">{{ 'nav-bar.login-btn' | translate }}</button>
+        </form>
+    </div>
+
+
+</div>

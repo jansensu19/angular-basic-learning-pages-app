@@ -1,0 +1,108 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-md);
+  background-color: var(--background-secondary);
+}
+
+.home-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  padding: var(--spacing-md);
+  background-color: var(--background-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-left {
+  flex: 1;
+  padding-right: var(--spacing-md);
+}
+
+.info-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
+.line-vertical {
+  width: 1px;
+  height: 140px;
+  background-color: var(--text-secondary);
+  margin: 0 var(--spacing-md);
+  border: none;
+}
+
+.info-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.user-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.sign-up-btn,
+.login-btn, .dashboard-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  user-select: none;
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.sign-up-btn, .dashboard-btn {
+  background-color: var(--text-primary);
+  color: var(--background-primary);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.25);
+
+  &:hover {
+    background-color: var(--text-secondary);
+    box-shadow: 0 4px 14px rgba(255, 64, 129, 0.35);
+    transform: translateY(-2px);
+  }
+}
+
+.login-btn {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+
+  &:hover {
+    background-color: var(--text-tertiary);
+    color: var(--background-tertiary);
+      border-color: var(--text-tertiary);
+    box-shadow: 0 4px 14px rgba(158, 158, 158, 0.35);
+    transform: translateY(-2px);
+  }
+}

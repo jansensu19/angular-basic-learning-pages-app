@@ -1,0 +1,33 @@
+<!-- navbar -->
+<app-nav-bar></app-nav-bar>
+<!-- main content -->
+<div class="home-container">
+    <div class="home-main-info">
+        <div class="main-info">
+            <div class="info-left">
+                <h1 class="info-title">{{ 'home.title' | translate }}</h1>
+                <p class="info-description">{{ 'home.description' | translate }}</p>
+            </div>
+
+            <div class="line-vertical"></div>
+
+            <div class="info-right">
+                <img src="assets/svg/angular-logo.svg" alt="Angular Logo" class="info-image">
+            </div>
+        </div>
+
+
+        <div class="user-button">
+            @if (authService.isLoggedIn()) {
+                <button routerLink="/dashboard" class="dashboard-btn">{{ 'home.dashboard-btn' | translate }}</button>
+            } @else {
+                <button routerLink="/signup" class="sign-up-btn">{{ 'home.signup-btn' | translate }}</button>
+                <button routerLink="/login" class="login-btn">{{ 'home.login-btn' | translate }}</button>
+            }
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<app-footer></app-footer>

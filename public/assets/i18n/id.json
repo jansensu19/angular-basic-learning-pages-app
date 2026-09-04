@@ -1,0 +1,72 @@
+{
+  "nav-bar": {
+    "logo-text": "Belajar Angular",
+    "home": "Beranda",
+    "signup": "Daftar",
+    "login": "Masuk",
+    "sign-in": "Masuk Akun",
+    "username": "Nama Pengguna",
+    "username-placeholder": "Masukkan nama pengguna",
+    "password": "Kata Sandi",
+    "password-placeholder": "Masukkan kata sandi",
+    "login-btn": "Masuk",
+    "dashboard": "Dashboard",
+    "logout": "Keluar"
+  },
+  "home": {
+    "title": "Selamat Datang di Halaman Belajar Dasar Angular",
+    "description": "Ini adalah aplikasi Angular sederhana untuk mendemonstrasikan konsep dan fitur dasar framework Angular. Jelajahi komponen, routing, dan styling untuk mempelajari lebih lanjut tentang pengembangan Angular.",
+    "signup-btn": "Belum punya akun? Daftar di sini",
+    "login-btn": "Sudah punya akun? Masuk di sini",
+    "dashboard-btn": "Pergi ke Dashboard"
+  },
+  "footer":{
+    "copyright": "© 2026 Jansen. Semua hak dilindungi."
+  },
+  "sign-up": {
+    "title": "Daftar",
+    "description": "Buat akun baru dengan mengisi formulir di bawah ini. ( Catatan: Jangan gunakan email dan kata sandi asli, ini hanya proyek pembelajaran )",
+    "username": "Nama Pengguna",
+    "username-placeholder": "Masukkan nama pengguna",
+    "email": "Email",
+    "email-placeholder": "Masukkan email",
+    "password": "Kata Sandi",
+    "password-placeholder": "Masukkan kata sandi",
+    "confirm-password": "Konfirmasi Kata Sandi",
+    "confirm-password-placeholder": "Konfirmasi kata sandi Anda",
+    "signup-btn": "Daftar",
+    "back-btn": "Kembali ke Beranda",
+    "success": {
+      "title": "Berhasil",
+      "message": "Pendaftaran berhasil!"
+    },
+    "error": {
+      "username-error": "Nama pengguna wajib diisi",
+      "email-error": "Email yang valid wajib diisi",
+      "password-error": "Kata sandi harus minimal 6 karakter",
+      "confirm-password-error": "Silakan konfirmasi kata sandi Anda"
+    }
+  },
+  "login-page": {
+    "title": "Selamat Datang Kembali",
+    "description": "Masuk dengan nama pengguna dan kata sandi Anda untuk melanjutkan belajar.",
+    "username": "Nama Pengguna",
+    "username-placeholder": "Masukkan nama pengguna Anda",
+    "password": "Kata Sandi",
+    "password-placeholder": "Masukkan kata sandi Anda",
+    "login-btn": "Masuk",
+    "no-account": "Belum punya akun?",
+    "signup-link": "Daftar di sini",
+    "success": {
+      "title": "Berhasil",
+      "message": "Login berhasil! Mengalihkan ke dashboard..."
+    },
+    "error": {
+      "username-error": "Nama pengguna wajib diisi",
+      "password-error": "Kata sandi wajib diisi",
+      "invalid-credentials": "Nama pengguna atau kata sandi salah. Silakan coba lagi.",
+      "no-user-found": "Pengguna tidak ditemukan. Silakan daftar terlebih dahulu."
+    }
+  }
+}
+

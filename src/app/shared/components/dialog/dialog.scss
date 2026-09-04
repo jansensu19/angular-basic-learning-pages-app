@@ -1,0 +1,39 @@
+/* Dialog Modal Styling */
+.dialog-wrapper {
+  padding: 8px 4px;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &.success h2 {
+    color: #2e7d32;
+  }
+
+  &.error h2 {
+    color: #c62828;
+  }
+
+  p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 8px 0 16px 0;
+    line-height: 1.4;
+  }
+
+  .dialog-ok-btn {
+    background-color: var(--text-primary) !important;
+    color: var(--background-primary) !important;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--text-secondary) !important;
+    }
+  }
+}

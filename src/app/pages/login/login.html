@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="back-button">
+    <button routerLink="/" class="back-btn">{{ 'sign-up.back-btn' | translate }}</button>
+  </div>
+
+  <h2>{{ 'login-page.title' | translate }}</h2>
+  <p>{{ 'login-page.description' | translate }}</p>
+
+  <div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'login-page.username' | translate }}</mat-label>
+        <input matInput formControlName="username" autocomplete="username"
+          [placeholder]="'login-page.username-placeholder' | translate" />
+        <mat-error>{{ 'login-page.error.username-error' | translate }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'login-page.password' | translate }}</mat-label>
+        <input matInput type="password" formControlName="password" autocomplete="current-password"
+          [placeholder]="'login-page.password-placeholder' | translate" />
+        <mat-error>{{ 'login-page.error.password-error' | translate }}</mat-error>
+      </mat-form-field>
+
+      <button type="submit" class="login-button">
+        {{ 'login-page.login-btn' | translate }}
+      </button>
+    </form>
+  </div>
+</div>

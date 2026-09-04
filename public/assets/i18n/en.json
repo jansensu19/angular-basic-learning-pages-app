@@ -1,0 +1,73 @@
+{
+  "nav-bar": {
+    "logo-text": "Angular Learning",
+    "home": "Home",
+    "signup": "Sign Up",
+    "login": "Login",
+    "sign-in": "Sign In",
+    "username": "Username",
+    "username-placeholder": "Enter username",
+    "password": "Password",
+    "password-placeholder": "Enter password",
+    "login-btn": "Login",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "home": {
+    "title": "Welcome to My Angular Basic Learning Page",
+    "description": "This is a simple Angular application to demonstrate basic concepts and features of Angular framework. Explore the components, routing, and styling to learn more about Angular development.",
+    "signup-btn": "Don't have an account? Sign Up here",
+    "login-btn": "Have an Account? Log In here",
+    "dashboard-btn": "Go to Dashboard"
+  },
+  "footer":{
+    "copyright": "© 2026 Jansen. All rights reserved."
+  },
+  "sign-up": {
+    "title": "Sign Up",
+    "description": "Create a new account by filling out the form below. ( Note: Don't use real email and password, this is just a learning project )",
+    "username": "Username",
+    "username-placeholder": "Enter username",
+    "email": "Email",
+    "email-placeholder": "Enter email",
+    "password": "Password",
+    "password-placeholder": "Enter password",
+    "confirm-password": "Confirm Password",
+    "confirm-password-placeholder": "Confirm your password",
+    "signup-btn": "Sign Up",
+    "back-btn": "Back to Home",
+    "success": {
+      "title": "Success",
+      "message": "Sign up successful!"
+    },
+    "error": {
+      "username-error": "Username is required",
+      "email-error": "Valid email is required",
+      "password-error": "Password must be at least 6 characters",
+      "confirm-password-error": "Please confirm your password"
+    }
+  },
+  "login-page": {
+    "title": "Welcome Back",
+    "description": "Log in with your username and password to continue learning.",
+    "username": "Username",
+    "username-placeholder": "Enter your username",
+    "password": "Password",
+    "password-placeholder": "Enter your password",
+    "login-btn": "Log In",
+    "no-account": "Don't have an account?",
+    "signup-link": "Sign up here",
+    "success": {
+      "title": "Success",
+      "message": "Login successful! Redirecting to dashboard..."
+    },
+    
+    "error": {
+      "title": "Error",
+      "username-error": "Username is required",
+      "password-error": "Password is required",
+      "invalid-credentials": "Invalid username or password. Please try again.",
+      "no-user-found": "No registered user found. Please sign up first."
+    }
+  }
+}

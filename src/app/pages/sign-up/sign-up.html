@@ -1,0 +1,39 @@
+<div class="sign-up-container">
+    <div class="back-button">
+        <button routerLink="/" class="back-btn">{{ 'sign-up.back-btn' | translate }}</button>
+    </div>
+    
+    <h2>{{ 'sign-up.title' | translate }}</h2>
+    <p>{{ 'sign-up.description' | translate }}</p>
+
+    <div class="form-container">
+        <form class="sign-up-form" (ngSubmit)="signUp()" #signUpForm="ngForm">
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'sign-up.username' | translate }}</mat-label>
+                <input matInput name="username" [(ngModel)]="username" required />
+                <mat-error>{{ 'sign-up.error.username-error' | translate }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'sign-up.email' | translate }}</mat-label>
+                <input matInput type="email" name="email" [(ngModel)]="email" required email />
+                <mat-error>{{ 'sign-up.error.email-error' | translate }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'sign-up.password' | translate }}</mat-label>
+                <input matInput type="password" name="password" [(ngModel)]="password" required minlength="6" />
+                <mat-error>{{ 'sign-up.error.password-error' | translate }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ 'sign-up.confirm-password' | translate }}</mat-label>
+                <input matInput type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required />
+                <mat-error>{{ 'sign-up.error.confirm-password-error' | translate }}</mat-error>
+            </mat-form-field>
+
+            <button type="submit" class="sign-up-button">{{ 'sign-up.signup-btn' | translate }}</button>
+        </form>
+    </div>
+</div>
