@@ -1,5 +1,28 @@
+# OnProgress
 # AngularBasicLearningPageApp
 
+## About
+This project is basic learning for user that need to have a basic test skill and to know what you need for your work.
+
+This learning will includes this topic : 
+```bash
+- Directive, Templates, Animations
+- Binding
+- Forms
+- Reactive Forms
+- Router
+```
+
+You will be presented Test without Answer, and the page with all the Answer of the topic
+
+But from this project you can learning to use "Translation Module", Login, Sign-up, Dashboard, Home-Page, Dialog Component, Auth.
+
+I hope that you can test your skill with this and learn more for all case that I make.
+
+
+
+
+# Angular Version and Information
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.6.
 
 ## Development server
