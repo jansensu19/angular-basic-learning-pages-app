@@ -212,6 +212,16 @@ export class ProgressService {
         fetchFile('/assets/learning-source/reactive-forms/reactive-forms.ts'),
         fetchFile('/assets/learning-source/router/router.html'),
         fetchFile('/assets/learning-source/router/router.ts'),
+        fetchFile('assets/learning-source/directive/directive.html'),
+        fetchFile('assets/learning-source/directive/directive.ts'),
+        fetchFile('assets/learning-source/binding/binding.html'),
+        fetchFile('assets/learning-source/binding/binding.ts'),
+        fetchFile('assets/learning-source/forms/forms.html'),
+        fetchFile('assets/learning-source/forms/forms.ts'),
+        fetchFile('assets/learning-source/reactive-forms/reactive-forms.html'),
+        fetchFile('assets/learning-source/reactive-forms/reactive-forms.ts'),
+        fetchFile('assets/learning-source/router/router.html'),
+        fetchFile('assets/learning-source/router/router.ts'),
       ]);
 
       const cleanSource = (html: string): string => {

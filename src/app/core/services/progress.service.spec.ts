@@ -66,6 +66,7 @@ describe('ProgressService', () => {
     const scanPromise = service.scanLearningCode();
 
     const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
+    const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('directive.html')) {
         req.flush('<div *ngIf="!isLoading"><p>loaded</p></div>');
@@ -106,6 +107,7 @@ describe('ProgressService', () => {
     `;
 
     const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
+    const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('directive.html')) {
         req.flush(templateWithHeaderChips);
@@ -139,6 +141,7 @@ describe('ProgressService', () => {
     const rescanPromise = service.resetAndRescan();
 
     const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
+    const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('binding.html')) {
         req.flush('<div class="sandbox-content"><p>{{ userName }}</p></div>');
