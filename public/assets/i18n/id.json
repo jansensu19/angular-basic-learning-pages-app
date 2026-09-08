@@ -67,6 +67,179 @@
       "invalid-credentials": "Nama pengguna atau kata sandi salah. Silakan coba lagi.",
       "no-user-found": "Pengguna tidak ditemukan. Silakan daftar terlebih dahulu."
     }
+  },
+  "dashboard": {
+    "title": "Dashboard Progres Belajar",
+    "subtitle": "Pantau penguasaan Anda pada konsep dasar Angular: direktif, data binding, formulir, dan perutean.",
+    "welcome": "Selamat datang kembali",
+    "overall-title": "Penguasaan Angular Keseluruhan",
+    "completed-badge": "Topik Dikuasai",
+    "reset-btn": "Atur Ulang Progres",
+    "mark-all-btn": "Tandai Semua Selesai",
+    "scan-btn": "Pindai Kode Belajar",
+    "scanning": "Memindai kode...",
+    "auto-detected": "Terdeteksi otomatis di template",
+    "scan-summary": "Deteksi otomatis terverifikasi dengan kode template dan komponen asli",
+    "learning-home-btn": "Beranda Belajar",
+    "answer-home-btn": "Kunci Jawaban",
+    "filter-all": "Semua Topik",
+    "filter-directives": "Direktif",
+    "filter-binding": "Data Binding",
+    "filter-forms": "Formulir",
+    "filter-router": "Router",
+    "visit-topic": "Buka Halaman Belajar",
+    "mark-done": "Tandai Selesai",
+    "completed": "Selesai",
+    "not-completed": "Belum Selesai",
+    "completed-lowercase": "selesai",
+    "mastered-prefix": "Anda telah menguasai",
+    "mastered-middle": "dari",
+    "mastered-suffix": "kompetensi yang diperlukan di Angular.",
+    "stat-mastered": "Dikuasai",
+    "stat-pending": "Tertunda",
+    "stat-completion": "Penyelesaian",
+    "category-progress": "Progres Kategori",
+    "cat-directives": "Direktif (Struktural & Atribut)",
+    "cat-binding": "Data Binding",
+    "cat-forms": "Formulir & Formulir Reaktif",
+    "cat-router": "Router & Navigasi",
+    "show-all": "Tampilkan Semua",
+    "filter-items": "Filter Item",
+    "unmark-all": "Batal Tandai Semua",
+    "mark-all-done": "Tandai Semua Selesai",
+    "checklist-title": "Daftar Periksa Kompetensi Topik",
+    "checklist-subtitle": "Pilih kompetensi yang telah Anda pelajari atau navigasi langsung ke halaman topik.",
+    "subcat-structural": "Direktif Struktural",
+    "subcat-attribute": "Direktif Atribut",
+    "subcat-binding": "Data Binding",
+    "subcat-forms": "Formulir",
+    "subcat-router": "Router & Navigasi",
+    "items": {
+      "dir-if": {
+        "name": "ngIf / @if",
+        "subcat": "Direktif Struktural",
+        "desc": "Rendering elemen bersyarat menggunakan @if atau *ngIf"
+      },
+      "dir-for": {
+        "name": "ngFor / @for",
+        "subcat": "Direktif Struktural",
+        "desc": "Iterasi daftar koleksi dengan @for (atau *ngFor) dengan ekspresi track"
+      },
+      "dir-switch": {
+        "name": "ngSwitch / @switch",
+        "subcat": "Direktif Struktural",
+        "desc": "Rendering bersyarat banyak cabang menggunakan @switch / @case"
+      },
+      "dir-template": {
+        "name": "<ng-template>",
+        "subcat": "Direktif Struktural",
+        "desc": "Definisi template untuk rendering tertunda atau terprogram"
+      },
+      "dir-component": {
+        "name": "ngComponentOutlet",
+        "subcat": "Direktif Struktural",
+        "desc": "Instansiasi komponen dinamis melalui ngComponentOutlet"
+      },
+      "dir-class": {
+        "name": "ngClass",
+        "subcat": "Direktif Atribut",
+        "desc": "Manipulasi class CSS secara dinamis berdasarkan state komponen"
+      },
+      "dir-style": {
+        "name": "ngStyle",
+        "subcat": "Direktif Atribut",
+        "desc": "Pengikatan inline style menggunakan sintaks objek bersyarat"
+      },
+      "dir-routerlink": {
+        "name": "routerLink",
+        "subcat": "Direktif Atribut",
+        "desc": "Direktif navigasi rute deklaratif pada tag anchor dan tombol"
+      },
+      "dir-model": {
+        "name": "ngModel",
+        "subcat": "Direktif Atribut",
+        "desc": "Direktif pengikatan nilai kontrol formulir dari FormsModule"
+      },
+      "bind-interp": {
+        "name": "Interpolasi {{ }}",
+        "subcat": "Data Binding",
+        "desc": "Menyematkan ekspresi dan nilai variabel langsung ke dalam HTML template"
+      },
+      "bind-prop": {
+        "name": "Property Binding [prop]",
+        "subcat": "Data Binding",
+        "desc": "Meneruskan data ke properti DOM atau child komponen @Input / signal input"
+      },
+      "bind-event": {
+        "name": "Event Binding (event)",
+        "subcat": "Data Binding",
+        "desc": "Mendengarkan event pengguna (click, input, submit) dan memanggil method"
+      },
+      "bind-twoway": {
+        "name": "Binding Dua Arah [()]",
+        "subcat": "Data Binding",
+        "desc": "Menyinkronkan nilai input dan state komponen menggunakan [(ngModel)] atau model()"
+      },
+      "form-template": {
+        "name": "Formulir Berbasis Template",
+        "subcat": "Formulir",
+        "desc": "Formulir dengan ngForm, ngModel, dan status validasi template (valid, touched)"
+      },
+      "form-reactive": {
+        "name": "Formulir Reaktif",
+        "subcat": "Formulir",
+        "desc": "FormGroup, FormControl, formControlName, dan Validators dalam TypeScript"
+      },
+      "router-nav": {
+        "name": "Navigasi Router",
+        "subcat": "Router & Navigasi",
+        "desc": "Transisi rute menggunakan routerLink dan navigasi terprogram router.navigate()"
+      }
+    }
+  },
+  "learning": {
+    "back-to-dashboard": "Kembali ke Dashboard",
+    "learning-home-btn": "Beranda Belajar",
+    "learning-home-title": "Kurikulum Pembelajaran Angular",
+    "learning-home-subtitle": "Jelajahi modul interaktif untuk berlatih direktif, data binding, formulir template dan reaktif, serta perutean.",
+    "curriculum-badge": "Kurikulum & Latihan Interaktif",
+    "topics-included": "Topik mencakup:",
+    "view-answers-btn": "Lihat Kunci Jawaban",
+    "practice-btn": "Mulai Latihan",
+    "curriculum-overview": "Modul Pembelajaran",
+    "solutions-banner-title": "Butuh Bantuan atau Contoh Solusi?",
+    "solutions-banner-desc": "Buka Kunci Jawaban untuk melihat implementasi dan sintaks referensi lengkap untuk semua topik.",
+    "solutions-btn": "Buka Kunci Jawaban",
+    "answer-home-title": "Kunci Jawaban & Solusi Referensi",
+    "answer-home-subtitle": "Implementasi referensi, penjelasan sintaks, dan kunci solusi untuk semua topik pembelajaran Angular.",
+    "answer-ref-solutions": "Referensi & Solusi",
+    "ref-impl": "Implementasi Referensi",
+    "try-topic-btn": "Coba di Sandbox Latihan",
+    "topic-directives-title": "Direktif: Struktural & Atribut",
+    "topic-directives-desc": "Latihan control flow (@if, @for, @switch), container template (<ng-template>, ngComponentOutlet), dan styling atribut (ngClass, ngStyle).",
+    "topic-binding-title": "Mekanisme Data Binding",
+    "topic-binding-desc": "Kuasai interpolasi {{ }}, property binding [prop], event handling (event), dan sinkronisasi dua arah [(ngModel)].",
+    "topic-forms-title": "Formulir Berbasis Template",
+    "topic-forms-desc": "Bangun formulir pengguna dengan ngForm, ngModel, dan status validasi template.",
+    "topic-reactive-forms-title": "Formulir Reaktif & Validasi",
+    "topic-reactive-forms-desc": "Bangun model form reaktif dengan FormGroup, FormControl, dan Validators bawaan.",
+    "topic-router-title": "Angular Router & Navigasi",
+    "topic-router-desc": "Implementasikan navigasi deklaratif routerLink dan transisi rute terprogram.",
+    "practice-sandbox": "Sandbox Latihan",
+    "instructions": "Petunjuk",
+    "tasks-title": "Kompetensi yang perlu dipraktikkan di file ini:",
+    "what-is-title": "Apa itu?",
+    "what-use-title": "Untuk apa digunakan?",
+    "topic-directives-what-is": "Direktif adalah class di Angular yang menambahkan perilaku baru, mengubah tata letak HTML, atau memodifikasi elemen DOM. Terdapat dua jenis utama: Direktif Struktural (@if, @for, @switch, <ng-template>) yang menambah atau menghapus elemen DOM, dan Direktif Atribut (ngClass, ngStyle, routerLink, ngModel) yang mengubah gaya atau perilaku elemen yang sudah ada.",
+    "topic-directives-what-use": "Digunakan untuk membuat tampilan web menjadi dinamis dan kondisional tanpa manipulasi DOM manual. Contohnya, menampilkan spinner loading atau pesan error secara bersyarat (@if), me-render daftar produk atau kartu berulang (@for), menerapkan class CSS aktif atau tema warna dinamis (ngClass, ngStyle), dan navigasi halaman (routerLink).",
+    "topic-binding-what-is": "Data Binding adalah jembatan komunikasi antara class komponen TypeScript (sumber data) dan template HTML (tampilan pengguna). Angular menyediakan 4 jenis binding utama: Interpolasi ({{ }}), Property Binding ([prop]), Event Binding ((event)), dan Binding Dua Arah ([(ngModel)]).",
+    "topic-binding-what-use": "Digunakan untuk membangun antarmuka interaktif di mana tampilan otomatis diperbarui saat data berubah, dan masukan pengguna langsung memperbarui data komponen. Contohnya, menampilkan nilai variabel pada teks, menonaktifkan tombol submit saat proses berlangsung ([disabled]), menangani klik tombol, dan menyinkronkan nilai input formulir.",
+    "topic-forms-what-is": "Formulir Berbasis Template (Template-Driven Forms) menggunakan direktif langsung di dalam template HTML (FormsModule, #form=\"ngForm\", dan [(ngModel)]) untuk menangani input dan validasi. Angular secara otomatis membuat hierarki kontrol formulir internal yang sesuai dengan input di template.",
+    "topic-forms-what-use": "Digunakan untuk formulir sederhana atau standar (seperti login, registrasi, formulir masukan, atau kolom pencarian) di mana aturan validasi bersifat langsung dan Anda ingin menulis kode TypeScript seminimal mungkin sambil membiarkan Angular mengelola status validasi (.valid, .invalid, .touched, .submitted).",
+    "topic-reactive-forms-what-is": "Formulir Reaktif (Reactive Forms) menyediakan pendekatan berbasis kode terprogram (model-driven) di mana struktur formulir dan aturan validasi didefinisikan secara eksplisit di TypeScript menggunakan FormGroup, FormControl, dan Validators, lalu dihubungkan ke HTML melalui [formGroup] dan formControlName.",
+    "topic-reactive-forms-what-use": "Digunakan untuk formulir yang kompleks, dinamis, atau skala enterprise yang memerlukan validasi ketat, immutability, aliran data reaktif (Observable), kemudahan pengujian unit, serta field dinamis (misalnya formulir multi-tahap, penambahan baris dinamis, atau validasi username asinkron ke server).",
+    "topic-router-what-is": "Angular Router adalah sistem navigasi Single Page Application (SPA) yang memetakan URL browser ke komponen dan me-rendernya secara dinamis di dalam <router-outlet> tanpa memuat ulang (reload) seluruh halaman web.",
+    "topic-router-what-use": "Digunakan untuk membuat aplikasi multi-halaman yang terorganisir dan dapat di-bookmark, menerapkan guard autentikasi untuk melindungi rute, mengirimkan parameter rute, serta melakukan transisi tampilan yang mulus menggunakan tombol routerLink atau navigasi terprogram router.navigate()."
   }
 }
 

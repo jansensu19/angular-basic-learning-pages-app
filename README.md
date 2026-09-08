@@ -6,7 +6,7 @@ This project is basic learning for user that need to have a basic test skill and
 
 This learning will includes this topic : 
 ```bash
-- Directive, Templates, Animations
+- Directive, Templates
 - Binding
 - Forms
 - Reactive Forms
@@ -16,6 +16,8 @@ This learning will includes this topic :
 You will be presented Test without Answer, and the page with all the Answer of the topic
 
 But from this project you can learning to use "Translation Module", Login, Sign-up, Dashboard, Home-Page, Dialog Component, Auth.
+
+To do the Learning, Please input the code in each file (pages/learning). After the code inputted it will be checked if each categories of the topic is satified or not on the basic.
 
 I hope that you can test your skill with this and learn more for all case that I make.
 

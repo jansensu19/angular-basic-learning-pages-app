@@ -1,1 +1,133 @@
-<p>answer-home works!</p>
+<app-nav-bar></app-nav-bar>
+
+<main class="learning-page">
+  <div class="learning-container">
+
+    <!-- Top Navigation Row -->
+    <div class="top-nav-bar">
+      <a routerLink="/dashboard" class="btn-back">
+        <img src="assets/svg/arrow-left.svg" alt="Back" width="16" height="16" class="btn-icon" />
+        <span>{{ 'learning.back-to-dashboard' | translate }}</span>
+      </a>
+
+      <div class="nav-breadcrumbs">
+        <a routerLink="/learning" class="btn-subnav">{{ 'learning.learning-home-btn' | translate }}</a>
+        <span class="crumb-separator">/</span>
+        <span class="crumb-current">{{ 'learning.answer-home-title' | translate }}</span>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="learning-header">
+      <div class="header-badge answer-badge">
+        <img src="assets/svg/document.svg" alt="Reference" width="14" height="14" class="badge-icon" />
+        <span>{{ 'learning.answer-ref-solutions' | translate }}</span>
+      </div>
+      <h1 class="page-title">{{ 'learning.answer-home-title' | translate }}</h1>
+      <p class="page-subtitle">{{ 'learning.answer-home-subtitle' | translate }}</p>
+    </header>
+
+    <!-- Solutions Reference Cards -->
+    <div class="solutions-list">
+
+      <!-- 1. Directives Solutions -->
+      <section class="solution-card" id="solution-directives">
+        <div class="solution-header">
+          <div class="solution-title-group">
+            <span class="topic-tag">Topic 1</span>
+            <h2>{{ 'learning.topic-directives-title' | translate }}</h2>
+          </div>
+          <a routerLink="/learning/directive" class="btn-try-practice">
+            {{ 'learning.try-topic-btn' | translate }} &rarr;
+          </a>
+        </div>
+        <p class="solution-summary">{{ 'learning.topic-directives-desc' | translate }}</p>
+
+        <div class="solution-code-block">
+          <div class="code-title">directive.html ({{ 'learning.ref-impl' | translate }})</div>
+          <pre><code>{{ directiveCode }}</code></pre>
+        </div>
+      </section>
+
+      <!-- 2. Data Binding Solutions -->
+      <section class="solution-card" id="solution-binding">
+        <div class="solution-header">
+          <div class="solution-title-group">
+            <span class="topic-tag">Topic 2</span>
+            <h2>{{ 'learning.topic-binding-title' | translate }}</h2>
+          </div>
+          <a routerLink="/learning/binding" class="btn-try-practice">
+            {{ 'learning.try-topic-btn' | translate }} &rarr;
+          </a>
+        </div>
+        <p class="solution-summary">{{ 'learning.topic-binding-desc' | translate }}</p>
+
+        <div class="solution-code-block">
+          <div class="code-title">binding.html ({{ 'learning.ref-impl' | translate }})</div>
+          <pre><code>{{ bindingCode }}</code></pre>
+        </div>
+      </section>
+
+      <!-- 3. Template-driven Forms Solutions -->
+      <section class="solution-card" id="solution-forms">
+        <div class="solution-header">
+          <div class="solution-title-group">
+            <span class="topic-tag">Topic 3</span>
+            <h2>{{ 'learning.topic-forms-title' | translate }}</h2>
+          </div>
+          <a routerLink="/learning/forms" class="btn-try-practice">
+            {{ 'learning.try-topic-btn' | translate }} &rarr;
+          </a>
+        </div>
+        <p class="solution-summary">{{ 'learning.topic-forms-desc' | translate }}</p>
+
+        <div class="solution-code-block">
+          <div class="code-title">forms.html ({{ 'learning.ref-impl' | translate }})</div>
+          <pre><code>{{ formsCode }}</code></pre>
+        </div>
+      </section>
+
+      <!-- 4. Reactive Forms Solutions -->
+      <section class="solution-card" id="solution-reactive-forms">
+        <div class="solution-header">
+          <div class="solution-title-group">
+            <span class="topic-tag">Topic 4</span>
+            <h2>{{ 'learning.topic-reactive-forms-title' | translate }}</h2>
+          </div>
+          <a routerLink="/learning/reactive-forms" class="btn-try-practice">
+            {{ 'learning.try-topic-btn' | translate }} &rarr;
+          </a>
+        </div>
+        <p class="solution-summary">{{ 'learning.topic-reactive-forms-desc' | translate }}</p>
+
+        <div class="solution-code-block">
+          <div class="code-title">reactive-forms.ts &amp; reactive-forms.html ({{ 'learning.ref-impl' | translate }})</div>
+          <pre><code>{{ reactiveFormsCode }}</code></pre>
+        </div>
+      </section>
+
+      <!-- 5. Router Solutions -->
+      <section class="solution-card" id="solution-router">
+        <div class="solution-header">
+          <div class="solution-title-group">
+            <span class="topic-tag">Topic 5</span>
+            <h2>{{ 'learning.topic-router-title' | translate }}</h2>
+          </div>
+          <a routerLink="/learning/router" class="btn-try-practice">
+            {{ 'learning.try-topic-btn' | translate }} &rarr;
+          </a>
+        </div>
+        <p class="solution-summary">{{ 'learning.topic-router-desc' | translate }}</p>
+
+        <div class="solution-code-block">
+          <div class="code-title">router.html &amp; router.ts ({{ 'learning.ref-impl' | translate }})</div>
+          <pre><code>{{ routerCode }}</code></pre>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>
+

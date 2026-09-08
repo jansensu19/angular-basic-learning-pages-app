@@ -1,8 +1,257 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="dashboard-content">
-  <h1>Welcome to the Dashboard</h1>
-  <p>This is a simple dashboard page.</p>
-</div>
+<main class="dashboard-page">
+  <div class="dashboard-container">
+
+    <header class="dashboard-header">
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        <span>{{ 'dashboard.welcome' | translate }}, <strong>{{ stats.username }}</strong></span>
+      </div>
+      <h1 class="dashboard-title">{{ 'dashboard.title' | translate }}</h1>
+      <p class="dashboard-subtitle">{{ 'dashboard.subtitle' | translate }}</p>
+    </header>
+
+    <section class="mastery-card">
+      <div class="chart-wrapper">
+        <svg class="donut-chart" viewBox="0 0 160 160" aria-hidden="true">
+          <defs>
+            <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1976d2" />
+              <stop offset="100%" stop-color="#ff4081" />
+            </linearGradient>
+          </defs>
+          <circle
+            class="donut-track"
+            cx="80"
+            cy="80"
+            r="70"
+            stroke-width="12"
+          />
+          <circle
+            class="donut-progress"
+            cx="80"
+            cy="80"
+            r="70"
+            stroke-width="12"
+            stroke="url(#chartGradient)"
+            stroke-dasharray="440"
+            [style.strokeDashoffset]="progressRingOffset"
+          />
+        </svg>
+        <div class="donut-center-info">
+          <span class="donut-percentage">{{ stats.percentage }}%</span>
+          <span class="donut-label">{{ 'dashboard.completed' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="mastery-info">
+        <h2 class="mastery-heading">{{ 'dashboard.overall-title' | translate }}</h2>
+        <p class="mastery-desc">
+          {{ 'dashboard.mastered-prefix' | translate }} <strong class="highlight-count">{{ stats.completed }}</strong> {{ 'dashboard.mastered-middle' | translate }}
+          <strong>{{ stats.total }}</strong> {{ 'dashboard.mastered-suffix' | translate }}
+        </p>
+
+        <div class="mastery-stats-row">
+          <div class="mini-stat">
+            <span class="mini-stat-label">{{ 'dashboard.stat-mastered' | translate }}</span>
+            <span class="mini-stat-value success">{{ stats.completed }}</span>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-stat-label">{{ 'dashboard.stat-pending' | translate }}</span>
+            <span class="mini-stat-value pending">{{ stats.pending }}</span>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-stat-label">{{ 'dashboard.stat-completion' | translate }}</span>
+            <span class="mini-stat-value pct">{{ stats.percentage }}%</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a routerLink="/learning" class="btn btn-learning">
+            <img src="assets/svg/book.svg" alt="Learning" width="14" height="14" class="btn-icon" />
+            <span>{{ 'dashboard.learning-home-btn' | translate }}</span>
+          </a>
+          <a routerLink="/answer" class="btn btn-answers">
+            <img src="assets/svg/document.svg" alt="Answers" width="14" height="14" class="btn-icon" />
+            <span>{{ 'dashboard.answer-home-btn' | translate }}</span>
+          </a>
+          <button
+            class="btn btn-scan"
+            [disabled]="stats.isScanning"
+            (click)="scanCode()"
+          >
+            @if (stats.isScanning) {
+              <span>{{ 'dashboard.scanning' | translate }}</span>
+            } @else {
+              <span>{{ 'dashboard.scan-btn' | translate }}</span>
+            }
+          </button>
+          <button class="btn btn-primary" (click)="markAll(true)">
+            {{ 'dashboard.mark-all-btn' | translate }}
+          </button>
+          <button class="btn btn-outline" (click)="resetProgress()">
+            {{ 'dashboard.reset-btn' | translate }}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <h3 class="section-title">{{ 'dashboard.category-progress' | translate }}</h3>
+      <div class="categories-grid">
+        @for (cat of categories; track cat.key) {
+          <div class="category-card" [class.completed]="cat.percentage === 100">
+            <div class="category-header">
+              <span class="category-tag">{{ ('dashboard.filter-' + cat.key) | translate | uppercase }}</span>
+              <span class="category-pct">{{ cat.percentage }}%</span>
+            </div>
+
+            <h4 class="category-name">{{ ('dashboard.cat-' + cat.key) | translate }}</h4>
+
+            <div class="progress-bar-container">
+              <div class="progress-bar-track">
+                <div
+                  class="progress-bar-fill"
+                  [style.width.%]="cat.percentage"
+                  [class.full]="cat.percentage === 100"
+                ></div>
+              </div>
+              <span class="progress-bar-label">{{ cat.completed }} / {{ cat.total }} {{ 'dashboard.completed-lowercase' | translate }}</span>
+            </div>
+
+            <div class="category-card-actions">
+              <button
+                class="cat-filter-btn"
+                [class.active]="currentFilter === cat.key"
+                (click)="setFilter(cat.key === currentFilter ? 'all' : $any(cat.key))"
+              >
+                @if (currentFilter === cat.key) {
+                  {{ 'dashboard.show-all' | translate }}
+                } @else {
+                  {{ 'dashboard.filter-items' | translate }}
+                }
+              </button>
+              <button
+                class="cat-complete-btn"
+                (click)="markCategory($any(cat.key), cat.percentage !== 100)"
+              >
+                @if (cat.percentage === 100) {
+                  {{ 'dashboard.unmark-all' | translate }}
+                } @else {
+                  {{ 'dashboard.mark-all-done' | translate }}
+                }
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="checklist-section">
+      <div class="checklist-header">
+        <div>
+          <h3 class="section-title">{{ 'dashboard.checklist-title' | translate }}</h3>
+          <p class="section-subtitle">{{ 'dashboard.checklist-subtitle' | translate }}</p>
+        </div>
+
+        <div class="filter-tabs">
+          <button
+            class="filter-tab"
+            [class.active]="currentFilter === 'all'"
+            (click)="setFilter('all')"
+          >
+            {{ 'dashboard.filter-all' | translate }} ({{ stats.total }})
+          </button>
+          <button
+            class="filter-tab"
+            [class.active]="currentFilter === 'directives'"
+            (click)="setFilter('directives')"
+          >
+            {{ 'dashboard.filter-directives' | translate }}
+          </button>
+          <button
+            class="filter-tab"
+            [class.active]="currentFilter === 'binding'"
+            (click)="setFilter('binding')"
+          >
+            {{ 'dashboard.filter-binding' | translate }}
+          </button>
+          <button
+            class="filter-tab"
+            [class.active]="currentFilter === 'forms'"
+            (click)="setFilter('forms')"
+          >
+            {{ 'dashboard.filter-forms' | translate }}
+          </button>
+          <button
+            class="filter-tab"
+            [class.active]="currentFilter === 'router'"
+            (click)="setFilter('router')"
+          >
+            {{ 'dashboard.filter-router' | translate }}
+          </button>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        @for (item of itemsList; track item.id) {
+          <div class="item-card" [class.is-done]="item.completed">
+            <div class="item-top">
+              <label class="checkbox-container">
+                <input
+                  type="checkbox"
+                  [id]="item.id"
+                  [checked]="item.completed"
+                  (change)="toggleItem(item.id)"
+                />
+                <span class="custom-checkbox"></span>
+              </label>
+
+              <div class="item-title-group">
+                <label [for]="item.id" class="item-title">{{ ('dashboard.items.' + item.id + '.name') | translate }}</label>
+                @if (item.subCategory) {
+                  <span class="subcat-chip">{{ ('dashboard.items.' + item.id + '.subcat') | translate }}</span>
+                }
+              </div>
+
+              <span
+                class="status-pill"
+                [class.done]="item.completed"
+              >
+                @if (item.completed) {
+                  {{ 'dashboard.completed' | translate }}
+                } @else {
+                  {{ 'dashboard.not-completed' | translate }}
+                }
+              </span>
+            </div>
+
+            <p class="item-description">{{ ('dashboard.items.' + item.id + '.desc') | translate }}</p>
+
+            @if (item.autoDetected && item.detectedSnippet) {
+              <div class="auto-detected-badge">
+                <img src="assets/svg/check.svg" alt="Detected" width="12" height="12" class="badge-icon" />
+                <span>{{ 'dashboard.auto-detected' | translate }}:</span>
+                <code>{{ item.detectedSnippet }}</code>
+              </div>
+            }
+
+            <div class="item-footer">
+              <a
+                [routerLink]="['/learning', item.topicSlug]"
+                class="topic-nav-link"
+              >
+                <span>{{ 'dashboard.visit-topic' | translate }}</span>
+                <img src="assets/svg/arrow-right.svg" alt="Arrow" width="14" height="14" class="link-icon" />
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+  </div>
+</main>
 
 <app-footer></app-footer>

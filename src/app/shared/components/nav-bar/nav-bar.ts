@@ -28,8 +28,16 @@ export class NavBar {
     password: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
   });
 
-  
+  get user(): { username: string; isLoggedIn: boolean } {
+    return {
+      username: this.authService.currentUser() || '',
+      isLoggedIn: this.authService.isLoggedIn(),
+    };
+  }
 
+  get currentLang(): string {
+    return this.translationService.currentLang();
+  }
   switchLanguage(lang: string) {
     this.translationService.setLanguage(lang);
   }

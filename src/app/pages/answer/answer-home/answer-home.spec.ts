@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { AnswerHome } from './answer-home';
 
 describe('AnswerHome', () => {
@@ -8,6 +10,7 @@ describe('AnswerHome', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AnswerHome],
+      providers: [provideRouter([]), provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AnswerHome);
@@ -19,3 +22,4 @@ describe('AnswerHome', () => {
     expect(component).toBeTruthy();
   });
 });
+

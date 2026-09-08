@@ -18,7 +18,7 @@
 
 
         <div class="user-button">
-            @if (authService.isLoggedIn()) {
+            @if (isLoggedIn) {
                 <button routerLink="/dashboard" class="dashboard-btn">{{ 'home.dashboard-btn' | translate }}</button>
             } @else {
                 <button routerLink="/signup" class="sign-up-btn">{{ 'home.signup-btn' | translate }}</button>

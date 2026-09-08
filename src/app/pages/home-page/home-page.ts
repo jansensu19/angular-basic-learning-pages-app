@@ -15,12 +15,8 @@ import { CommonModule } from '@angular/common';
 export class HomePage {
   private router = inject(Router);
   public authService = inject(AuthService);
-  // IF NEED TRY TO REDIRECT BUT WITH FUNCTION
-  // redirectMemberTo(path: string) {
-  //   if (path === 'signup') {
-  //     this.router.navigate(['/signup']);
-  //   } else if (path === 'login') {
-  //     this.router.navigate(['/login']);
-  //   }
-  // }
+
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
 }

@@ -13,19 +13,19 @@
     <div class="nav-links" [class.active]="isMenuOpen">
         <a routerLink="/" class="nav-link">{{ 'nav-bar.home' | translate }}</a>
 
-        @if (authService.isLoggedIn()) {
+        @if (user.isLoggedIn) {
         <a routerLink="/dashboard" class="nav-link dashboard-trigger">{{ 'nav-bar.dashboard' | translate }}</a>
         <a (click)="logout()" class="nav-link logout-trigger">{{ 'nav-bar.logout' | translate }}</a>
-        <p class="nav-username">{{ authService.currentUser() }}</p>
+        <p class="nav-username">{{ user.username }}</p>
         } @else {
         <a (click)="toggleLoginBox()" class="nav-link login-trigger">{{ 'nav-bar.login' | translate }}</a>
         <a routerLink="/signup" class="nav-link">{{ 'nav-bar.signup' | translate }}</a>
         }
 
         <div class="lang-switch">
-            <button [class.active]="translationService.currentLang() === 'en'"
+            <button [class.active]="currentLang === 'en'"
                 (click)="switchLanguage('en')">EN</button>
-            <button [class.active]="translationService.currentLang() === 'id'"
+            <button [class.active]="currentLang === 'id'"
                 (click)="switchLanguage('id')">ID</button>
         </div>
     </div>

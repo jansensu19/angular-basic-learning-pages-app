@@ -1,0 +1,78 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="learning-page">
+  <div class="learning-container">
+
+    <div class="top-nav-bar">
+      <a routerLink="/dashboard" class="btn-back">
+        <img src="assets/svg/arrow-left.svg" alt="Back" width="16" height="16" class="btn-icon" />
+        <span>{{ 'learning.back-to-dashboard' | translate }}</span>
+      </a>
+
+      <div class="nav-breadcrumbs">
+        <a routerLink="/learning" class="btn-subnav">{{ 'learning.learning-home-btn' | translate }}</a>
+        <span class="crumb-separator">/</span>
+        <a routerLink="/answer" class="btn-subnav">{{ 'learning.view-answers-btn' | translate }}</a>
+      </div>
+    </div>
+
+    <header class="topic-explanation-card">
+      <div class="topic-meta">
+        <span class="topic-tag">Topic 1</span>
+        <h1 class="topic-title">{{ 'learning.topic-directives-title' | translate }}</h1>
+      </div>
+
+      <p class="topic-description">{{ 'learning.topic-directives-desc' | translate }}</p>
+
+      <div class="concept-details-grid">
+        <div class="concept-detail-box what-is">
+          <div class="concept-box-header">
+            <img src="assets/svg/info.svg" alt="Info" width="16" height="16" class="concept-icon" />
+            <h3>{{ 'learning.what-is-title' | translate }}</h3>
+          </div>
+          <p>{{ 'learning.topic-directives-what-is' | translate }}</p>
+        </div>
+
+        <div class="concept-detail-box what-use">
+          <div class="concept-box-header">
+            <img src="assets/svg/target.svg" alt="Target" width="16" height="16" class="concept-icon" />
+            <h3>{{ 'learning.what-use-title' | translate }}</h3>
+          </div>
+          <p>{{ 'learning.topic-directives-what-use' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="competencies-checklist-box">
+        <span class="box-title">{{ 'learning.tasks-title' | translate }}</span>
+        <div class="competencies-chips">
+          <span class="chip">ngIf / &#64;if</span>
+          <span class="chip">ngFor / &#64;for</span>
+          <span class="chip">ngSwitch / &#64;switch</span>
+          <span class="chip">&lt;ng-template&gt;</span>
+          <span class="chip">ngComponentOutlet</span>
+          <span class="chip">ngClass</span>
+          <span class="chip">ngStyle</span>
+          <span class="chip">routerLink</span>
+          <span class="chip">ngModel</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Practice Sandbox Container -->
+    <section class="practice-sandbox-container">
+      <div class="sandbox-header">
+        <div class="sandbox-title-group">
+          <span class="sandbox-dot"></span>
+          <h2>{{ 'learning.practice-sandbox' | translate }}</h2>
+        </div>
+      </div>
+
+      <div class="sandbox-content">
+        <!-- User's Practice Code -->
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<app-footer></app-footer>

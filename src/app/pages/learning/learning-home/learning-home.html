@@ -1,1 +1,85 @@
-<p>learning-home works!</p>
+<app-nav-bar></app-nav-bar>
+
+<main class="learning-page">
+  <div class="learning-container">
+
+    <!-- Top Navigation Row -->
+    <div class="top-nav-bar">
+      <a routerLink="/dashboard" class="btn-back">
+        <img src="assets/svg/arrow-left.svg" alt="Back" width="16" height="16" class="btn-icon" />
+        <span>{{ 'learning.back-to-dashboard' | translate }}</span>
+      </a>
+
+      <a routerLink="/answer" class="btn-answers">
+        <img src="assets/svg/document-green.svg" alt="Answers" width="15" height="15" class="btn-icon" />
+        <span>{{ 'learning.view-answers-btn' | translate }}</span>
+      </a>
+    </div>
+
+    <header class="learning-header">
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        <span>{{ 'learning.curriculum-badge' | translate }}</span>
+      </div>
+      <h1 class="page-title">{{ 'learning.learning-home-title' | translate }}</h1>
+      <p class="page-subtitle">{{ 'learning.learning-home-subtitle' | translate }}</p>
+    </header>
+
+    <section class="solutions-banner">
+      <div class="banner-content">
+        <h3>{{ 'learning.solutions-banner-title' | translate }}</h3>
+        <p>{{ 'learning.solutions-banner-desc' | translate }}</p>
+      </div>
+      <a routerLink="/learning/answers" class="btn-banner">
+        {{ 'learning.solutions-btn' | translate }} &rarr;
+      </a>
+    </section>
+
+    <section class="curriculum-section">
+      <h2 class="section-title">{{ 'learning.curriculum-overview' | translate }}</h2>
+
+      <div class="modules-grid">
+        @for (mod of modules; track mod.id) {
+          <div class="module-card">
+            <div class="module-top">
+              <span class="module-badge" [style.color]="mod.color" [style.borderColor]="mod.color">
+                {{ mod.id | uppercase }}
+              </span>
+              <h3 class="module-title">{{ mod.titleKey | translate }}</h3>
+            </div>
+
+            <div class="module-concept-blocks">
+              <div class="concept-block what-is">
+                <span class="concept-label">{{ 'learning.what-is-title' | translate }}</span>
+                <p class="concept-text">{{ mod.whatIsKey | translate }}</p>
+              </div>
+              <div class="concept-block what-use">
+                <span class="concept-label">{{ 'learning.what-use-title' | translate }}</span>
+                <p class="concept-text">{{ mod.whatUseKey | translate }}</p>
+              </div>
+            </div>
+
+            <div class="module-topics">
+              <span class="topics-heading">{{ 'learning.topics-included' | translate }}</span>
+              <div class="chips-container">
+                @for (topic of mod.topics; track topic) {
+                  <span class="topic-chip">{{ topic }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="module-footer">
+              <a [routerLink]="mod.route" class="btn-practice">
+                <span>{{ 'learning.practice-btn' | translate }}</span>
+                <img src="assets/svg/arrow-right-white.svg" alt="Start" width="15" height="15" class="btn-icon" />
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<app-footer></app-footer>

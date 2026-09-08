@@ -12,3 +12,59 @@
 
   font-family: 'Roboto', sans-serif;
 }
+
+/* Shared Conceptual Details Layout for Learning Pages */
+.concept-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 4px;
+
+  .concept-detail-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &.what-is {
+      border-left: 4px solid #1976d2;
+      .concept-box-header svg { color: #1976d2; }
+    }
+
+    &.what-use {
+      border-left: 4px solid #00897b;
+      .concept-box-header svg { color: #00897b; }
+    }
+
+    .concept-box-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      h3 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0;
+        color: #334155;
+      }
+
+      svg, img, .concept-icon {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.55;
+    }
+  }
+}

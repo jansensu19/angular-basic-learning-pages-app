@@ -69,5 +69,178 @@
       "invalid-credentials": "Invalid username or password. Please try again.",
       "no-user-found": "No registered user found. Please sign up first."
     }
+  },
+  "dashboard": {
+    "title": "Learning Progress Dashboard",
+    "subtitle": "Track your mastery across Angular core concepts, directives, data binding, forms, and routing.",
+    "welcome": "Welcome back",
+    "overall-title": "Overall Angular Mastery",
+    "completed-badge": "Topics Mastered",
+    "reset-btn": "Reset Progress",
+    "mark-all-btn": "Mark All Completed",
+    "scan-btn": "Scan Learning Code",
+    "scanning": "Scanning code...",
+    "auto-detected": "Auto-detected in template",
+    "scan-summary": "Auto-detect verified against actual template and component code",
+    "learning-home-btn": "Learning Home",
+    "answer-home-btn": "Answer Home",
+    "filter-all": "All Topics",
+    "filter-directives": "Directives",
+    "filter-binding": "Data Binding",
+    "filter-forms": "Forms",
+    "filter-router": "Router",
+    "visit-topic": "Open Learning Page",
+    "mark-done": "Mark Done",
+    "completed": "Completed",
+    "not-completed": "Pending",
+    "completed-lowercase": "completed",
+    "mastered-prefix": "You have mastered",
+    "mastered-middle": "out of",
+    "mastered-suffix": "required competencies across Angular.",
+    "stat-mastered": "Mastered",
+    "stat-pending": "Pending",
+    "stat-completion": "Completion",
+    "category-progress": "Category Progress",
+    "cat-directives": "Directives (Structural & Attribute)",
+    "cat-binding": "Data Binding",
+    "cat-forms": "Forms & Reactive Forms",
+    "cat-router": "Router & Navigation",
+    "show-all": "Show All",
+    "filter-items": "Filter Items",
+    "unmark-all": "Unmark All",
+    "mark-all-done": "Mark All Done",
+    "checklist-title": "Topic Competency Checklist",
+    "checklist-subtitle": "Select competencies you have practiced or navigate directly to the topic page.",
+    "subcat-structural": "Structural Directives",
+    "subcat-attribute": "Attribute Directives",
+    "subcat-binding": "Data Binding",
+    "subcat-forms": "Forms",
+    "subcat-router": "Router & Navigation",
+    "items": {
+      "dir-if": {
+        "name": "ngIf / @if",
+        "subcat": "Structural Directives",
+        "desc": "Conditional element rendering using @if or *ngIf"
+      },
+      "dir-for": {
+        "name": "ngFor / @for",
+        "subcat": "Structural Directives",
+        "desc": "List iteration over collections with @for (or *ngFor) with track expression"
+      },
+      "dir-switch": {
+        "name": "ngSwitch / @switch",
+        "subcat": "Structural Directives",
+        "desc": "Multi-branch conditional rendering using @switch / @case"
+      },
+      "dir-template": {
+        "name": "<ng-template>",
+        "subcat": "Structural Directives",
+        "desc": "Template definition for deferred or programmatic rendering"
+      },
+      "dir-component": {
+        "name": "ngComponentOutlet",
+        "subcat": "Structural Directives",
+        "desc": "Dynamic component instantiation via ngComponentOutlet"
+      },
+      "dir-class": {
+        "name": "ngClass",
+        "subcat": "Attribute Directives",
+        "desc": "Dynamic CSS class manipulation based on component state"
+      },
+      "dir-style": {
+        "name": "ngStyle",
+        "subcat": "Attribute Directives",
+        "desc": "Inline style binding using conditional object syntax"
+      },
+      "dir-routerlink": {
+        "name": "routerLink",
+        "subcat": "Attribute Directives",
+        "desc": "Declarative route navigation directive on anchor and buttons"
+      },
+      "dir-model": {
+        "name": "ngModel",
+        "subcat": "Attribute Directives",
+        "desc": "Form control value binding directive from FormsModule"
+      },
+      "bind-interp": {
+        "name": "Interpolation {{ }}",
+        "subcat": "Data Binding",
+        "desc": "Embed expressions and variable values directly into template HTML"
+      },
+      "bind-prop": {
+        "name": "Property Binding [prop]",
+        "subcat": "Data Binding",
+        "desc": "Pass data down to DOM properties or child component @Input / signal input"
+      },
+      "bind-event": {
+        "name": "Event Binding (event)",
+        "subcat": "Data Binding",
+        "desc": "Listen to user events (click, input, submit) and invoke methods"
+      },
+      "bind-twoway": {
+        "name": "Two-way Binding [()]",
+        "subcat": "Data Binding",
+        "desc": "Synchronize input values and component state using [(ngModel)] or custom model()"
+      },
+      "form-template": {
+        "name": "Template-Driven Forms",
+        "subcat": "Forms",
+        "desc": "Form with ngForm, ngModel, and template validation states (valid, touched)"
+      },
+      "form-reactive": {
+        "name": "Reactive Forms",
+        "subcat": "Forms",
+        "desc": "FormGroup, FormControl, formControlName, and Validators in TypeScript"
+      },
+      "router-nav": {
+        "name": "Router Navigation",
+        "subcat": "Router & Navigation",
+        "desc": "Route transitions using routerLink and programmatic router.navigate()"
+      }
+    }
+  },
+  "learning": {
+    "back-to-dashboard": "Back to Dashboard",
+    "learning-home-btn": "Learning Home",
+    "learning-home-title": "Angular Learning Curriculum",
+    "learning-home-subtitle": "Explore interactive modules to practice directives, data binding, template and reactive forms, and routing.",
+    "curriculum-badge": "Curriculum & Interactive Practice",
+    "topics-included": "Topics included:",
+    "view-answers-btn": "View Answer Reference",
+    "practice-btn": "Start Practice",
+    "curriculum-overview": "Course Modules",
+    "solutions-banner-title": "Need Help or Reference Code?",
+    "solutions-banner-desc": "Check out the Answer Home to see complete working syntax and reference implementations for all topics.",
+    "solutions-btn": "Go to Answer Home",
+    "answer-home-title": "Answer Home & Reference Solutions",
+    "answer-home-subtitle": "Reference implementations, syntax explanations, and solution keys for all Angular learning topics.",
+    "answer-ref-solutions": "Reference & Solutions",
+    "ref-impl": "Reference Implementation",
+    "try-topic-btn": "Try in Practice Sandbox",
+    "topic-directives-title": "Directives: Structural & Attribute",
+    "topic-directives-desc": "Practice control flow (@if, @for, @switch), template containers (<ng-template>, ngComponentOutlet), and attribute styling (ngClass, ngStyle).",
+    "topic-binding-title": "Data Binding Mechanics",
+    "topic-binding-desc": "Master interpolation {{ }}, property binding [prop], event handling (event), and two-way synchronization [(ngModel)].",
+    "topic-forms-title": "Template-driven Forms",
+    "topic-forms-desc": "Build user forms with ngForm, ngModel, and template validation states.",
+    "topic-reactive-forms-title": "Reactive Forms & Validation",
+    "topic-reactive-forms-desc": "Construct reactive form models with FormGroup, FormControl, and built-in Validators.",
+    "topic-router-title": "Angular Router & Navigation",
+    "topic-router-desc": "Implement declarative routerLink navigation and programmatic route transitions.",
+    "practice-sandbox": "Practice Sandbox Result",
+    "instructions": "Instructions",
+    "tasks-title": "Competencies to practice in this file:",
+    "what-is-title": "What is it?",
+    "what-use-title": "What is it used for?",
+    "topic-directives-what-is": "Directives are classes in Angular that add new behaviors, transform HTML layout, or modify DOM elements. There are two primary types: Structural Directives (@if, @for, @switch, <ng-template>) which add or remove DOM nodes, and Attribute Directives (ngClass, ngStyle, routerLink, ngModel) which change the styling or behavior of existing elements.",
+    "topic-directives-what-use": "Used to make views reactive and conditional without manual DOM scripting. For example, conditionally toggling loading spinners and alerts (@if), rendering dynamic product or user lists (@for), applying active CSS classes or color themes (ngClass, ngStyle), and navigating between views (routerLink).",
+    "topic-binding-what-is": "Data Binding is the communication bridge between a TypeScript component class (data state) and its HTML template (user view). Angular provides 4 core binding types: Interpolation ({{ }}), Property Binding ([prop]), Event Binding ((event)), and Two-Way Binding ([(ngModel)]).",
+    "topic-binding-what-use": "Used to build interactive user interfaces where the view automatically updates when data changes, and user inputs instantly update component state. For example, displaying variable values in headers, disabling submit buttons while loading ([disabled]), handling click and submit events, and two-way syncing form inputs.",
+    "topic-forms-what-is": "Template-Driven Forms use directives directly inside HTML templates (FormsModule, #form=\"ngForm\", and [(ngModel)]) to handle input capture and validation. Angular automatically generates an internal form control tree corresponding to the inputs in the template.",
+    "topic-forms-what-use": "Used for simple or standard forms (like login, sign-up, feedback, or search bars) where validation requirements are straightforward and you want to write minimal TypeScript code while letting Angular manage validation states (.valid, .invalid, .touched, .submitted).",
+    "topic-reactive-forms-what-is": "Reactive Forms provide a programmatic, model-driven approach where form structure and validations are defined explicitly in TypeScript using FormGroup, FormControl, and Validators, and bound to HTML via [formGroup] and formControlName.",
+    "topic-reactive-forms-what-use": "Used for complex, dynamic, or enterprise forms that demand strict validation logic, immutability, reactive observable data streams, unit testing, and dynamic fields (e.g. multi-step registration, dynamic address lines, or async username checks against an API).",
+    "topic-router-what-is": "Angular Router is the Single Page Application (SPA) navigation system that maps browser URL paths to components and renders them dynamically in <router-outlet> without refreshing the entire webpage.",
+    "topic-router-what-use": "Used to create organized, bookmarkable multi-view web applications, enforce authentication route guards, pass route parameters, and trigger smooth view transitions via routerLink buttons or programmatic router.navigate() redirects."
   }
 }
