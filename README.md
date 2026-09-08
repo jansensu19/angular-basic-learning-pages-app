@@ -15,14 +15,13 @@ This learning will includes this topic :
 
 You will be presented Test without Answer, and the page with all the Answer of the topic
 
-But from this project you can learning to use "Translation Module", Login, Sign-up, Dashboard, Home-Page, Dialog Component, Auth.
+But from this project you can learning to use "Translation Module", Login, Sign-up, Dashboard, Home-Page, Dialog Component, Auth and the added of CI/CD.
 
 To do the Learning, Please input the code in each file (pages/learning). After the code inputted it will be checked if each categories of the topic is satified or not on the basic.
 
 I hope that you can test your skill with this and learn more for all case that I make.
 
-
-
+Please help commend for feedback and you can freely fork and use this branch for your own but remember to mention me if you use this code.
 
 # Angular Version and Information
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.6.
