@@ -1,4 +1,3 @@
-# OnProgress
 # AngularBasicLearningPageApp
 
 ## About
