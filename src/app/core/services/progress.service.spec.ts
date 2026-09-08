@@ -65,7 +65,6 @@ describe('ProgressService', () => {
   it('should auto-detect ngIf in template when scanning code', async () => {
     const scanPromise = service.scanLearningCode();
 
-    const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
     const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('directive.html')) {
@@ -106,7 +105,6 @@ describe('ProgressService', () => {
       <app-footer></app-footer>
     `;
 
-    const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
     const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('directive.html')) {
@@ -140,7 +138,6 @@ describe('ProgressService', () => {
 
     const rescanPromise = service.resetAndRescan();
 
-    const reqs = httpMock.match((r) => r.url.startsWith('/assets/learning-source/'));
     const reqs = httpMock.match((r) => r.url.startsWith('assets/learning-source/'));
     for (const req of reqs) {
       if (req.request.url.includes('binding.html')) {

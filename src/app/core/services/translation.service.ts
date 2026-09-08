@@ -16,7 +16,6 @@ export class TranslationService {
   }
 
   setLanguage(lang: string) {
-    this.http.get<Record<string, any>>(`/assets/i18n/${lang}.json`).subscribe({
     this.http.get<Record<string, any>>(`assets/i18n/${lang}.json`).subscribe({
       next: (data) => {
         this.translations.set(data);
